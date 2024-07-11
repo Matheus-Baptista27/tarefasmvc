@@ -1,13 +1,10 @@
-<!-- views/index.ejs -->
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tarefas</title>
-
     <link rel="stylesheet" href="/css/styles.css">
-
 </head>
 <body>
     <h1>Criar Tarefas</h1>
@@ -16,18 +13,19 @@
             <li>
                 <h2><%= task.title %></h2>
                 <p><%= task.description %></p>
-                <p><%= task.date %></p>
+                <p><%= new Date(task.date).toLocaleDateString('pt-BR', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }) %></p>
                 <% if (task.image) { %>
                     <img src="<%= task.image %>" alt="Task Image">
                 <% } %>
-                <br>
-                <a href="/tasks/<%= task.id %>/edit">Editar</a>
-                <form action="/tasks/<%= task.id %>?_method=DELETE" method="POST">
-                    <button type="submit">Deletar</button>
-                </form>
+                <div class="actions">
+                    <a href="/tasks/<%= task.id %>/edit" class="edit">Editar</a>
+                    <form action="/tasks/<%= task.id %>?_method=DELETE" method="POST" class="delete-form">
+                        <button type="submit" class="delete">Deletar</button>
+                    </form>
+                </div>
             </li>
         <% }) %>
     </ul>
-    <a href="/tasks/new">Criar uma nova tarefa</a>
+    <a href="/tasks/new" class="create">Criar uma nova tarefa</a>
 </body>
 </html>

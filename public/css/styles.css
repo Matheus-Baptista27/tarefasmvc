@@ -1,107 +1,139 @@
+/* geral */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  margin: 0;
+  padding: 0;
+}
 
-/* Estilos gerais para formulários */
+h1 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  background-color: #fff;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  max-width: 600px;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 3px;
+  display: inline-block;
+  text-align: center;
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  color: white;
+  display: inline-block;
+  text-align: center;
+}
+
+a:hover, button:hover {
+  opacity: 0.8;
+}
+
+/* layotu formulario*/
 form {
-    max-width: 500px;
-    margin: 20px auto;
-    padding: 20px;
-    background-color: #f0f0f0;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-  }
-  
-  form label {
-    display: block;
-    margin-bottom: 10px;
-    font-weight: bold;
-  }
-  
-  form input[type="text"],
-  form textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 3px;
-    box-sizing: border-box;
-  }
-  
-  form input[type="submit"],
-  form button {
-    padding: 10px 20px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    border-radius: 3px;
-    cursor: pointer;
-  }
-  
-  form input[type="submit"]:hover,
-  form button:hover {
-    background-color: #45a049;
-  }
-  
-  /* Estilos específicos para a página de criar tarefas */
-  .create-form {
-    background-color: #fff;
-  }
-  
-  .create-form h1 {
-    text-align: center;
-    margin-bottom: 20px;
-  }
-  
-  /* Estilos específicos para a página de editar tarefas */
-  .edit-form {
-    background-color: #fff;
-  }
-  
-  .edit-form h1 {
-    text-align: center;
-    margin-bottom: 20px;
-  }
-  
-  /* Estilos específicos para a página de visualizar tarefas */
-  .task-details {
-    max-width: 600px;
-    margin: 20px auto;
-    padding: 20px;
-    background-color: #fff;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-  }
-  
-  .task-details h1 {
-    margin-bottom: 10px;
-  }
-  
-  .task-details p {
-    margin-bottom: 15px;
-  }
-  
-  .task-details img {
-    max-width: 100%;
-    height: auto;
-    margin-bottom: 15px;
-  }
-  
-  .task-details .actions {
-    margin-top: 20px;
-  }
-  
-  .task-details .actions a,
-  .task-details .actions button {
-    padding: 10px 20px;
-    margin-right: 10px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    border-radius: 3px;
-    cursor: pointer;
-    text-decoration: none;
-  }
-  
-  .task-details .actions a:hover,
-  .task-details .actions button:hover {
-    background-color: #45a049;
-  }
-  
+  max-width: 500px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+form label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+form input[type="text"],
+form input[type="date"],
+form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  box-sizing: border-box;
+}
+
+form input[type="submit"],
+form button {
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+form input[type="submit"]:hover,
+form button:hover {
+  background-color: #45a049;
+}
+
+/* ações do s botoes */
+.actions {
+  display: flex;
+  gap: 10px;
+}
+
+.actions a.edit {
+  background-color: #008CBA;
+  width: 100px;
+  height: 40px;
+  line-height: 40px; 
+}
+
+.actions button.delete {
+  background-color: #f44336;
+  width: 100px;
+  height: 40px;
+  line-height: 40px; 
+  border: none;
+  padding: 0;
+}
+
+/* remove a bord do formulariop */
+.delete-form {
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+/* estilo do botao criar tarefa */
+.create {
+  display: block;
+  width: fit-content;
+  margin: 20px auto;
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.create:hover {
+  background-color: #45a049;
+}

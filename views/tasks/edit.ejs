@@ -4,14 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Editar Tarefa</title>
-
   <link rel="stylesheet" href="/css/styles.css">
-
 </head>
 <body>
   <h1>Editar Tarefa</h1>
   <form action="/tasks/<%= task.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
-    <label for="title">Titulo:</label>
+    <label for="title">Título:</label>
     <input type="text" id="title" name="title" value="<%= task.title %>" required>
     <br>
     <label for="description">Descrição:</label>

@@ -3,24 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tarefas</title>
-
+    <title>Detalhes da Tarefa</title>
     <link rel="stylesheet" href="/css/styles.css">
-
 </head>
 <body>
-    <h1><%= task.title %></h1>
-    <p><%= task.description %></p>
-    <p><%= task.date %></p>
-    <% if (task.image) { %>
-        <img src="<%= task.image %>" alt="Task Image">
-    <% } %>
-    <br>
-    <a href="/tasks/<%= task.id %>/edit">Editar</a>
-    <form action="/tasks/<%= task.id %>?_method=DELETE" method="POST">
-        <button type="submit">Deletar</button>
-    </form>
-    <br>
-    <a href="/tasks">Voltar para lista</a>
+    <div class="task-details">
+        <h1><%= task.title %></h1>
+        <p><%= task.description %></p>
+        <p><%= task.date %></p>
+        <% if (task.image) { %>
+            <img src="<%= task.image %>" alt="Task Image">
+        <% } %>
+        <div class="actions">
+            <a href="/tasks/<%= task.id %>/edit" class="edit">Editar</a>
+            <form action="/tasks/<%= task.id %>?_method=DELETE" method="POST">
+                <button type="submit" class="delete">Deletar</button>
+            </form>
+        </div>
+        <br>
+        <a href="/tasks" class="back">Voltar para lista de tarefas</a>
+    </div>
 </body>
 </html>

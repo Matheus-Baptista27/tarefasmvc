@@ -1,4 +1,4 @@
-
+/*
 function ensureAuthenticated(req, res, next) {
     if (req.isAuthenticated()) {
         return next();
@@ -6,4 +6,4 @@ function ensureAuthenticated(req, res, next) {
     res.redirect('/login'); // Redireciona para a página de login se não estiver autenticado
 }
 
-module.exports = { ensureAuthenticated };
+module.exports = { ensureAuthenticated };*/

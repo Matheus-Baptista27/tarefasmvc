@@ -1,4 +1,4 @@
-// routes/authRoutes.js
+/*// routes/authRoutes.js
 const express = require('express');
 const router = express.Router();
 const passport = require('passport');
@@ -33,4 +33,4 @@ router.post('/register', async (req, res) => {
     }
 });
 
-module.exports = router;
+module.exports = router;*/
