@@ -1,0 +1,33 @@
+<!-- views/index.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarefas</title>
+
+    <link rel="stylesheet" href="/css/styles.css">
+
+</head>
+<body>
+    <h1>Criar Tarefas</h1>
+    <ul>
+        <% tasks.forEach(task => { %>
+            <li>
+                <h2><%= task.title %></h2>
+                <p><%= task.description %></p>
+                <p><%= task.date %></p>
+                <% if (task.image) { %>
+                    <img src="<%= task.image %>" alt="Task Image">
+                <% } %>
+                <br>
+                <a href="/tasks/<%= task.id %>/edit">Editar</a>
+                <form action="/tasks/<%= task.id %>?_method=DELETE" method="POST">
+                    <button type="submit">Deletar</button>
+                </form>
+            </li>
+        <% }) %>
+    </ul>
+    <a href="/tasks/new">Criar uma nova tarefa</a>
+</body>
+</html>

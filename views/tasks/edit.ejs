@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Editar Tarefa</title>
+
+  <link rel="stylesheet" href="/css/styles.css">
+
+</head>
+<body>
+  <h1>Editar Tarefa</h1>
+  <form action="/tasks/<%= task.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
+    <label for="title">Titulo:</label>
+    <input type="text" id="title" name="title" value="<%= task.title %>" required>
+    <br>
+    <label for="description">Descrição:</label>
+    <textarea id="description" name="description" required><%= task.description %></textarea>
+    <br>
+    <label for="date">Data:</label>
+    <input type="date" id="date" name="date" value="<%= task.date.toISOString().split('T')[0] %>" required>
+    <br>
+    <label for="image">Imagem:</label>
+    <input type="file" id="image" name="image">
+    <br>
+    <button type="submit">Atualizar tarefa</button>
+  </form>
+</body>
+</html>

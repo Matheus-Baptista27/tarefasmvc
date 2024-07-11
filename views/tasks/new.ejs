@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tarefas</title>
+
+  <link rel="stylesheet" href="/css/styles.css">
+
+</head>
+<body>
+  <h1>Criar uma nova tarefa</h1>
+  <form action="/tasks" method="POST" enctype="multipart/form-data">
+    <label for="title">Titulo:</label>
+    <input type="text" id="title" name="title" required>
+    <br>
+    <label for="description">Descrição:</label>
+    <textarea id="description" name="description" required></textarea>
+    <br>
+    <label for="date">Data:</label>
+    <input type="date" id="date" name="date" required>
+    <br>
+    <label for="image">Imagem:</label>
+    <input type="file" id="image" name="image">
+    <br>
+    <button type="submit">Criar tarefa</button>
+  </form>
+</body>
+</html>
