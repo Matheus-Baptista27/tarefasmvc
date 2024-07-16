@@ -26,6 +26,14 @@ li {
   max-width: 600px;
 }
 
+li img, .task-details img {
+  max-width: 100%;
+  height: auto;
+  display: block; /* Ensure image does not have inline display */
+  margin-bottom: 10px;
+}
+
+
 a {
   text-decoration: none;
   color: #fff;
@@ -102,6 +110,8 @@ form button:hover {
   width: 100px;
   height: 40px;
   line-height: 40px; 
+  border: none;
+  padding: 0;
 }
 
 .actions button.delete {
@@ -112,6 +122,11 @@ form button:hover {
   border: none;
   padding: 0;
 }
+
+.actions form {
+  margin: 0;
+}
+
 
 /* remove a bord do formulariop */
 .delete-form {
